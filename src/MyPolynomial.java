@@ -3,8 +3,6 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class MyPolynomial {
-
-	//This is a comments
 	
 	private double[] coeffs;
 
@@ -82,7 +80,17 @@ public class MyPolynomial {
 	}
 	
 	public MyPolynomial multiply(MyPolynomial p) {
-		
+		double[] result = new double[getDegree() + p.getDegree() + 1];
+		for (int i = 0; i < result.length; i++) {
+			result[i] = 0;
+		}
+		double[] coeffsP = p.getCoeffs();
+		for (int i = 0; i < coeffs.length; i++) {
+			for (int j = 0; j < coeffsP.length; j++) {
+				result[i + j] += coeffs[i] * coeffsP[j];
+			}
+		}
+		return new MyPolynomial(result);
 	}
 	
 }

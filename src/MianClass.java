@@ -3,8 +3,10 @@ public class MianClass {
 
 	public static void main(String[] args) {
 		
-		MyPolynomial p = new MyPolynomial(2.0, 5.0, 6.0, 3.0, 0 ,8); 
-		System.out.println(p);
+		MyPolynomial p1 = new MyPolynomial(2, 2, 1, 2);
+		MyPolynomial p2 = new MyPolynomial(1, 1, 2);
+		System.out.println(p1.multiply(p2));
+		
 	}
 
 }
