@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class MyPolynomial {
 
-	//This is a comment
+	//This is a comments
 	
 	private double[] coeffs;
 
